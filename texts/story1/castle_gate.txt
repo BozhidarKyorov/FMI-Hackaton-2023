@@ -1,0 +1,13 @@
+choice
+The gate rises up to the skies. Tall around 8 meters and the wall behind it - 12 the pirates are faced with the difficult choice, how to enter the castle.
+<image count>
+<link to image>*<image count>
+3 <button count>
+<button text 1>
+<button link 1>
+<button text 2>
+<button link 2>
+<button text 3>
+<button link 3>
+<emotion type>
+<emotion mod>
