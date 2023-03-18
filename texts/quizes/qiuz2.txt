@@ -1,0 +1,4 @@
+logic quiz
+0
+The question is:
+./texts/story1/basement/basement4_boss_room.txt

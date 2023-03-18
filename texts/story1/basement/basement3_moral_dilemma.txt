@@ -1,0 +1,12 @@
+dialog
+After the devastating question the pirates continue down the narrow hall. After minutes they come across a small cage in the wall. There is a small goblin hugging 2 golden coins on the floor. The pirates start arguing if they should leave him or let him go with them and if he would steal some of the treasure.
+0
+2
+Let him go
+./texts/story1/basement/basement4_big_door.txt
+kindness
+5
+Leave him to rot
+./texts/story1/basement/basement4_big_door.txt
+greed
+10

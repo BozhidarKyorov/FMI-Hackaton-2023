@@ -4,10 +4,10 @@ After jumping over the pit without losing someone (hopefully), the pirates conti
 <link to image>*<image count>
 2
 Go left
-<button link 1>
+./texts/story1/basement/basement3_left.txt
 default
 0
 Go right
-<button link 2>
+./texts/story1/basement/basement3_left.txt
 default
 0

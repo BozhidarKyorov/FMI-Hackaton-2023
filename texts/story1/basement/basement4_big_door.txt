@@ -1,0 +1,8 @@
+dialog
+After 10 more minutes the group the hall widens and they can see large metal door. Around the edge of it there is a question.
+0
+1
+See the question
+./texts/quizes/quiz1.txt
+default
+0
