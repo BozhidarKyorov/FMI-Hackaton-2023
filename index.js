@@ -31,7 +31,7 @@ document.getElementById("play-game").addEventListener("click", () => {
 
 async function start() {
   document.getElementById("starting_button").style.display = 'none'
-  loadModule("begin.txt")
+  loadModule("pickstory.txt")
 }
 
 async function loadModule(module) {
