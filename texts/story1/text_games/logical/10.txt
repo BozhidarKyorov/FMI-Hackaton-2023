@@ -1,0 +1,7 @@
+logical
+At which historical building would you find wardens called Beefeaters?
+4
+0 Westminster Abbey
+0 Buckingham palace
+0 Windsor Castle
+1 The London Tower

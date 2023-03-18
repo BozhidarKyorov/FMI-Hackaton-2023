@@ -1,0 +1,7 @@
+logical
+Non stick cooking utensils are coated with:
+4
+0 PVC
+1 Teflon
+0 Black paint
+0 Polystyrene
