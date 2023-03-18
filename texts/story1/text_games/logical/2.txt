@@ -1,0 +1,7 @@
+logical
+Which famous monument did Shah Jahān build to immortalize his wife?
+4
+0 The Jāmeh mosque of Isfahān
+0 Angkor Wat
+0 Golestan Palace
+1 Taj Mahal
