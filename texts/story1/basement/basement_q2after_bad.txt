@@ -1,0 +1,9 @@
+dialog/choice
+The sign turns blank as the knight swing with his arm, trying to hit one of the pirates. He barely misses the attack and a moment later, he disappears. The door behind him opens with cracking noise seconds later.
+<image count>
+<link to image>*<image count>
+1
+Continue
+<button link 1>
+default
+0
