@@ -1,0 +1,124 @@
+html {
+    background-color: aquamarine;
+}
+.game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+#tiles {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: white;
+    padding: 8px;
+    border-radius: 0.5rem;
+    width: 300px;
+  }
+
+  .selected {
+    background-color: #FFF !important;
+    background-image: none !important;
+    border: none;
+    color: white;
+  }
+  
+  .tile {
+    font-family: var(--mainFontBtn);
+    font-size: 24px;
+    height: 100px;
+    margin: 1px;
+    width: 98px;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    background-size: cover;
+    border-width: 2px;
+  }
+
+  div[class*=level] {
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .under {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #puzzle-title h3 {
+    margin: 10px;
+  }
+  
+  h3 {
+    display: flex;
+  }
+
+  /* class when needed to hide elements */
+.remove {
+    display: none;
+  }
+
+  .btn {
+    cursor: pointer;
+    position: relative;
+    color: black;
+    width: 256px;
+    height: 64px;
+    line-height: 64px;
+    transition: all 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    font-family: var(--mainFontBtn);
+}
+
+  span .btn {
+    transition: all 0.3s;
+    transform: scale(1, 1);
+}
+
+  /* buttons in game */
+.game {
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.game:hover span {
+    transform: scale(1.2, 1.2);
+}
+
+.game::before {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(0.1, 0.1);
+}
+
+.game:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.game::after {
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.game:hover::after {
+    transform: scale(0, 0);
+    opacity: 0;
+}
+
+#show-nums {
+    width: 130px;
+}
