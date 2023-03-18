@@ -4,6 +4,6 @@ Going around the wall, the pirates see a continuous wall of stone with empty tow
 <link to image>*<image count>
 1
 Continue around
-<button link 1>
+./texts/story1/gate/castle_gate_around_2.txt
 default
 0

@@ -4,6 +4,6 @@ Cyrcling around half the castle, there is still nothing but stone.
 <link to image>*<image count>
 1
 Continue around
-<button link 1>
+./texts/story1/gate/castle_gate_around_3.txt
 default
 0

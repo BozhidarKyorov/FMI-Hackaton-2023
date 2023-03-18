@@ -4,6 +4,6 @@ Going back to the entrance, the pirates are thinking if they should go back down
 <link to image>*<image count>
 1
 Go back
-<button link 1>
+./texts/story1/basement/basement_q1.txt
 default
 0

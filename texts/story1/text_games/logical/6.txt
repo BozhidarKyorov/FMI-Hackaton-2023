@@ -1,6 +1,6 @@
 logical
 Which of the following actors hasn't played in the role of Spiderman in a movie?
-3
+4
 0
 Tom Holland
 1

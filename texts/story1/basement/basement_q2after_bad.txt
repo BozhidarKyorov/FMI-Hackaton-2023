@@ -4,6 +4,6 @@ The sign turns blank as the knight swing with his arm, trying to hit one of the 
 <link to image>*<image count>
 1
 Continue
-<button link 1>
+./texts/story1/basement/basement2_hall.txt
 default
 0

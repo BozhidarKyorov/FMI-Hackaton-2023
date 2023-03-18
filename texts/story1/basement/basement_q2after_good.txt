@@ -4,6 +4,6 @@ The sign turns blank for a moment then the knight disappears as the door behind 
 <link to image>*<image count>
 1
 Continue
-<button link 1>
+./texts/story1/basement/basement2_hall.txt
 default
 0

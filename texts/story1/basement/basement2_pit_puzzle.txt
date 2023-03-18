@@ -1,2 +1,3 @@
 sliding puzzle
 <puzzle name/link>
+./texts/story1/basement/basement3_split_path.txt
