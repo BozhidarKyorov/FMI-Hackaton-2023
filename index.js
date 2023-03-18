@@ -14,6 +14,10 @@ var container = document.getElementById('story')
 
 
 document.getElementById("starting_button").addEventListener('click', start)
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbe4d58f20a43d2f48163727ab22ae88287c2dca
 
 async function start() {
   document.getElementById("starting_button").style.display = 'none'
@@ -107,6 +111,7 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
   return buttons
 }
 
-function loadSlidingPuzzle(arrayWithArguments) {
-  
+
+function openSlidingPuzzle(arrayWithArguments[1]) {
+
 }
