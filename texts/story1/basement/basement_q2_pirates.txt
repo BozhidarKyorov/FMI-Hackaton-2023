@@ -1,4 +1,4 @@
-choice
+dialog/choice
 The knight takes a more offensive pose making a step toward them. The text on the sign changes and they can read another question: What are you doing here?
 <image count>
 <link to image>*<image count>
@@ -10,4 +10,4 @@ default
 Repair the prison cells
 <button link 2>
 greed
-<emotion mod 2>
+5

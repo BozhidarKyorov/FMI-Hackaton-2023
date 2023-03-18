@@ -1,4 +1,4 @@
-choice
+dialog/choice
 Behind the gates, the group sees the big castle rasining in front of them. There are stairs to the main door and a path around the castle that leads to the underground level at the left side. 
 <image count>
 <link to image>*<image count>
@@ -10,4 +10,4 @@ default
 Go in the basement
 <button link 2>
 curiosity
-<emotion mod 2>
+3

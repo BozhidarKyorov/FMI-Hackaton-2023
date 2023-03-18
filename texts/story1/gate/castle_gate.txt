@@ -1,16 +1,16 @@
-choice
+dialog/choice
 The gate rises to the skies. Tall around 8 meters and the wall above it - 12, the pirates are faced with the difficult choice: How to enter the castle?
 <image count>
 <link to image>*<image count>
-3 <button count>
-Go around and look for another enterance <button name 1>
+3
+Go around and look for another enterance
 <button link 1>
 curiosity
-<emotion mod 1>
+5
 Try to force open the gate
 <button link 2>
 anger
-<emotion mod 2>
+5
 Knock on the gate
 <button link 3>
 default
