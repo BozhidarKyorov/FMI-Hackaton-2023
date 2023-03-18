@@ -4,14 +4,14 @@ Heading down the stairs, they enter a long hall leading to closed metal door at 
 img/story1/door.png
 3
 Pirates
-<button link 1>
+./texts/story1/basement/basement_q2_pirates.txt
 default
 0
 Mechanics
-<button link 2>
+./texts/story1/basement/basement_q2_mechanics.txt
 greed
 5
 We are lost
-<button link 2>
+./texts/story1/basement/basement_q2_loop1.txt
 greed
 2

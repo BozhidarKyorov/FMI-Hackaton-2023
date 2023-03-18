@@ -8,6 +8,6 @@ Go in the castle
 default
 0
 Go in the basement
-<button link 2>
+./texts/story1/basement/basement_q1.txt
 curiosity
 3

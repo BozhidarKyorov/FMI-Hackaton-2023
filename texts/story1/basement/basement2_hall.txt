@@ -4,6 +4,6 @@ Going in, they are in a large and long hall. On the walls are scattered closed e
 <link to image>*<image count>
 1
 Solve puzzle
-<button link to puzzle>
+./texts/story1/basement/basement2_pit_puzzle.txt
 default
 0
