@@ -1,0 +1,9 @@
+dialog
+This is the dialog. Now this is another dialog. This is the end.
+1
+img/story1/goosemon.png
+2
+Go into the forest
+texts/story1/1_1.txt
+Go into the castle
+texts/story2/1_2.txt
