@@ -10,14 +10,12 @@ var emotions = {
   default : 0
 }
 
+var hp = 2
+
 var container = document.getElementById('story')
 
 
 document.getElementById("starting_button").addEventListener('click', start)
-<<<<<<< HEAD
-=======
-
->>>>>>> fbe4d58f20a43d2f48163727ab22ae88287c2dca
 
 async function start() {
   document.getElementById("starting_button").style.display = 'none'
@@ -33,7 +31,9 @@ async function loadModule(module) {
   if(arrayWithArguments[0] == "dialog") {
     deserializeDialog(arrayWithArguments)
   } else if (arrayWithArguments[0] == "sliding puzzle") {
-    openSlidingPuzzle(arrayWithArguments)
+    SlidingPuzzle(arrayWithArguments)
+  } else if (arrayWithArguments[0] == "quiz") {
+
   }
 }
 
@@ -69,17 +69,20 @@ function deserializeDialog(arrayWithArguments) {
   for(let i = 0; i < buttonsCount; i++) {
     let butt = document.createElement("button")
     butt.innerHTML = buttons[i].content
+    butt.classList.add("answer_button")
     butt.addEventListener('click', () => {
       emotions[buttons[i].emotion] += Number.parseInt(buttons[i].modifier)
       loadModule(buttons[i].link)
       buttonDiv.style.display = 'none'
+      let buttonAnswer = document.createElement('p')
+      buttonAnswer.textContent = butt.innerText
+      div.appendChild(buttonAnswer)
     })
     buttonDiv.appendChild(butt)
   }
   div.appendChild(buttonDiv)
   container.appendChild(div)
   div.scrollIntoView({ behavior: "smooth", block: "end" })
-  //div.scrollTop = 0
 }
 
 function getImagesInfo(arrayWithArguments, imageCount) {
@@ -112,6 +115,23 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 }
 
 
-function openSlidingPuzzle(arrayWithArguments[1]) {
+function SlidingPuzzle(arrayWithArguments) {
+  openSlidingPuzzle(arrayWithArguments[1])
+}
 
+async function openQuiz(arrayWithArguments) {
+
+  let quiztext = arrayWithArguments[1]
+  let logicQuizArguments = await getContent(arrayWithArguments[2])
+  let next_link = arrayWithArguments[3]
+
+  askLogicQuestion(logicQuizArguments)
+}
+
+function askLogicQuestion(logicQuizArguments) {
+  let logicText = logicQuizArguments[1]
+  let answersCount = Number.parseInt(logicQuizArguments[2])
+  for(let i = 0; i < answersCount; i++) {
+    
+  }
 }

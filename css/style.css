@@ -1,0 +1,13 @@
+.main_container {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+}
+
+.answer_button {
+    background-color: white;
+    border: solid 1px black;
+    width: 100px;
+    height: 40px;
+    margin-left: 25px 
+}
