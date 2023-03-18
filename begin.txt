@@ -5,5 +5,9 @@ img/story1/goosemon.png
 2
 Go into the forest
 texts/story1/1_1.txt
+greed
+5
 Go into the castle
 texts/story2/1_2.txt
+default
+0

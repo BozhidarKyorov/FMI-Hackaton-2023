@@ -1,9 +1,0 @@
-dialog
-This is 1_1
-1
-img/story1/rabbiton.png
-2
-Pet the rabbit
-texts/story1/1_1.txt
-Kick the rabbit
-texts/story/1_2.txt
