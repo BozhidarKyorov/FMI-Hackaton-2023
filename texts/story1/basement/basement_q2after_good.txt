@@ -1,0 +1,9 @@
+choice
+The sign turns blank for a moment then the knight disappears as the door behind them opens with cracking noise.
+<image count>
+<link to image>*<image count>
+1
+Continue
+<button link 1>
+default
+0
