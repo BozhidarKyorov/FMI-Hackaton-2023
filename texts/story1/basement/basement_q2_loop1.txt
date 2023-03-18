@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 The sign tell you that the exit is that way and the knight points back to the stairs you came from.
 <image count>
 <link to image>*<image count>

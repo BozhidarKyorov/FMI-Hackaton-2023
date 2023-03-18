@@ -1,7 +1,7 @@
-dialog/choice
+dialog
 Heading down the stairs, they enter a long hall leading to closed metal door at the end of it. When they get close a headless knight with dirty metal armor manifest in front of them. He hold a sign as he cant talk for obvious reasons: Who are you?
-<image count>
-<link to image>*<image count>
+1
+img/story1/door.png
 3
 Pirates
 <button link 1>

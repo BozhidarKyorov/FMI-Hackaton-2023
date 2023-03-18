@@ -44,8 +44,8 @@ async function loadModule(module) {
     deserializeDialog(arrayWithArguments)
   } else if (arrayWithArguments[0] == "sliding puzzle") {
     SlidingPuzzle(arrayWithArguments)
-  } else if (arrayWithArguments[0] == "quiz") {
-    openSlidingPuzzle(arrayWithArguments[1])
+  } else if (arrayWithArguments[0] == "logic quiz") {
+    openQuiz(arrayWithArguments)
   }
 }
 
@@ -73,6 +73,7 @@ function deserializeDialog(arrayWithArguments) {
   for(let i = 0; i < imageCount; i++) {
     let img = document.createElement("img")
     img.src = imageURLS[i]
+    img.classList.add('img')
     div.appendChild(img)
   }
   
@@ -133,19 +134,64 @@ function SlidingPuzzle(arrayWithArguments) {
 
 async function openQuiz(arrayWithArguments) {
 
-  let quiztext = arrayWithArguments[1]
-  let logicQuizArguments = await getContent(arrayWithArguments[2])
+  let quiztext = arrayWithArguments[2]
   let next_link = arrayWithArguments[3]
 
-  askLogicQuestion(logicQuizArguments)
+  let p = document.createElement('p')
+  p.textContent = quiztext
+  container.appendChild(p)
+
+  let randLogicIndex = 1 /*Math.floor(Math.random() * 10 + 1)*/
+  let logicQuizArguments = await getContent('texts/logicTests/' + randLogicIndex + '.txt')
+
+  askLogicQuestion(logicQuizArguments.split("\r\n"), next_link)
+
+  
 }
 
-function askLogicQuestion(logicQuizArguments) {
+function askLogicQuestion(logicQuizArguments, link_next) {
+  let answerDiv = document.createElement('div')
+
+  //debugger
+
   let logicText = logicQuizArguments[1]
+  let logicTextP = document.createElement('p')
+  logicTextP.textContent = logicText
+
   let answersCount = Number.parseInt(logicQuizArguments[2])
-  for(let i = 0; i < answersCount; i++) {
+
+  let buttonDiv = document.createElement('div')
+  for(let i = 0; i < answersCount * 2; i += 2) {
+
+    let correct = Number.parseInt(logicQuizArguments[3 + i])
+    let answerText = logicQuizArguments[3 + i + 1]
+    let button = document.createElement('button')
+    button.textContent = answerText
+    button.classList.add('answer_button')
+
+    button.addEventListener('click', () => {
+      buttonDiv.style.display = 'none'
+      let returning = document.createElement('p')
+      returning.textContent = button.textContent
+      if(correct == 0) {
+        lives--
+        returning.textContent += '\nWrong answer! -1 heart!'
+      } else {
+        returning.textContent += '\nCorrect answer!'
+        console.log('correct')
+      }
+      container.appendChild(returning)
+      loadModule(link_next)
+    })
+    buttonDiv.appendChild(button)
     
   }
+
+  answerDiv.appendChild(logicTextP)
+
+  answerDiv.appendChild(buttonDiv)
+
+  container.appendChild(answerDiv)
 }
 
 function loadSlidingPuzzle(theme) {
