@@ -6,28 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type='text/css' media='screen' href="css/sliding-puzzle.css">
         <link rel="stylesheet" type='text/css' media='screen' href="css/style.css">
+        <link rel="stylesheet" type='text/css' media='screen' href="css/games.css">
         <title>Document</title>
 
     </head>
 
 <body>
-    
-    <div id="container" class="main_container">
+    <div class="main" id="container">
         <h1>Start your story</h1>
-        <button id="starting_button" class="answer_button">Click me</button>
+        <button id="starting_button">Click me</button>
+        <button id="start-game">start game</button>
         <div id="story"></div>
+        <button id="play-game">game</button>
     </div>
-    <div class="game-board remove">
-        <div id="tiles">
-        </div>
-        <div class="under game-board">
-            <div class="game-btns">
-                <div id="show-nums" class="game btn">
-                    <span class="btn">Show tile numbers</span>
+    <div class="popup hint remove" id="hint-popup"> 
+            <div class="game-board">
+                <div id="tiles"> </div>
+                <div class="under game-board">
+                    <div class="game-btns">
+                        <div id="show-nums" class="game btn">
+                            <span class="btn">Show tile numbers</span>
+                        </div>
+                    </div>
+                    <div id="giveup-btn" class="game btn" title="This will cost you a life">
+                        <span class="btn">Give up</span>
+                    </div>
                 </div>
-            </div>
+      <!-- <span id="notice">Notice: 3 extra seconds would be added to your time.</span> --> 
     </div>
-    
+</div>
     <script defer src="index.js" type="module"></script>
 
 </body>
