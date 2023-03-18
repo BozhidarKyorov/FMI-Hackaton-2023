@@ -14,7 +14,8 @@ var emotions = {
 var container = document.getElementById('story')
 
 
-document.getElementById("starting_button").addEventListener('click', start())
+document.getElementById("starting_button").addEventListener('click', start)
+
 
 async function start() {
   loadModule("begin.txt")
@@ -106,5 +107,5 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 }
 
 function loadSlidingPuzzle(arrayWithArguments) {
-
+openSlidingPuzzle(arrayWithArguments[1])
 }
