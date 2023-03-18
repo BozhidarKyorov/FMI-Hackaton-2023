@@ -1,0 +1,9 @@
+dialog
+A group of 4 pirates is looking for forgotten riches in a forgotten castle to survive the harsh winter. It is already late autumn and they need something to survive. A tell comes to them about a lost treasure in a forgotten castle close to the shores. As they go to the castle, they are faced with the enormous gate and the group is faced with their first challenge.
+<image count>
+<link to image>*<image count>
+1 <button count>
+<button text 1>
+<button link 1>
+<emotion type>
+<emotion mod>
