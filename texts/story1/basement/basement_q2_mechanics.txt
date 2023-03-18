@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 The text on the sign changes and they can read another question: What are you doing here?
 <image count>
 <link to image>*<image count>

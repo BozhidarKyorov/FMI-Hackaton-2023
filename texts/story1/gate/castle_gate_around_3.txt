@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 The pirates are almost to the main gate by this point. It seems there is only one entrance to the wall.
 <image count>
 <link to image>*<image count>

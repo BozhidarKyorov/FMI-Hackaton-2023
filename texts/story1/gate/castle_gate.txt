@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 The gate rises to the skies. Tall around 8 meters and the wall above it - 12, the pirates are faced with the difficult choice: How to enter the castle?
 <image count>
 <link to image>*<image count>

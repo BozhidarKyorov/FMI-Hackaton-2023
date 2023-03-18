@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 After jumping over the pit without losing someone (hopefully), the pirates continue down the halls. After 5 minutes walking in the dark, smelly coridor, the path in front of them splits.
 <image count>
 <link to image>*<image count>

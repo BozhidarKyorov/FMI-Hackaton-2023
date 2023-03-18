@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 Knocking on the door, the pirates expected nothing to happen. After waiting for couple of seconds, just before they start pushing on the door, the gate opens. There is noone behind the wall. Entering through the open door the pirates hear a soft but loud voice: "Welcome!"
 <image count>
 <link to image>*<image count>

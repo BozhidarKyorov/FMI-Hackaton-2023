@@ -1,4 +1,4 @@
-dialog/choice
+dialog
 Going in, they are in a large and long hall. On the walls are scattered closed empty cells. In some of them there is bones lying on the floor.
 <image count>
 <link to image>*<image count>
