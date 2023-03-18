@@ -1,6 +1,6 @@
 import { openSlidingPuzzle } from './slidingPuzzles.js'
 
-
+var lives = 3;
 
 var emotions = {
   anger: 0,
@@ -12,10 +12,20 @@ var emotions = {
 }
 
 var container = document.getElementById('story')
-
-
 document.getElementById("starting_button").addEventListener('click', start)
+document.getElementById("start-game").addEventListener('click', loadSlidingPuzzle("couple"))
 
+document.getElementById("giveup-btn").addEventListener('click', () => {
+  document.body.classList.remove("active-popup");
+  document.getElementById("hint-popup").classList.add("remove");
+  lives--;
+isGameOver();
+})
+
+document.getElementById("play-game").addEventListener("click", () => {
+  document.getElementById("hint-popup").classList.remove("remove");
+   document.body.classList.add("active-popup");
+});
 
 async function start() {
   loadModule("begin.txt")
@@ -32,7 +42,7 @@ async function loadModule(module) {
   if(arrayWithArguments[0] == "dialog") {
     deserializeDialog(arrayWithArguments)
   } else if (arrayWithArguments[0] == "sliding puzzle") {
-    openSlidingPuzzle(arrayWithArguments)
+    openSlidingPuzzle(arrayWithArguments[1])
   }
 
 
@@ -106,6 +116,16 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
   return buttons
 }
 
-function loadSlidingPuzzle(arrayWithArguments) {
-openSlidingPuzzle(arrayWithArguments[1])
+function loadSlidingPuzzle(theme) {
+
+if(openSlidingPuzzle(theme)){
+  console.log("official win");
+}
+}
+
+function isGameOver() {
+  if(lives === 0) {
+    // ekran gori
+  }
+  else return false;
 }

@@ -1,8 +1,12 @@
-export function openSlidingPuzzle(arg) {
-  start();
-  theme = arg;
-}
 var theme;
+
+var hasWon = false;
+export function openSlidingPuzzle(arg) {
+  theme = arg;
+  start();
+  return hasWon;
+}
+
 let numberOfTiles = 9;
 let highlighted = 0;
 let shuffled = false;
@@ -10,14 +14,15 @@ let size = 3;
 let currentTile;
 let currentTileText;
 let buttonContainer = document.getElementById('tiles');
-const removeText = "remove";
+
 var newTile;
 var currentTileIndex;
 var currentTileValue;
 let hasJustWon = false;
+
 function start() {
   highlighted = numberOfTiles;
-  document.getElementsByClassName("game-board")[0].classList.remove(removeText);
+  document.getElementsByClassName("game-board")[0].classList.remove("remove");
   newGame();
 }
 
@@ -28,14 +33,13 @@ function newGame() {
   }, 500);
 }
 
-
 function loadTiles() {
   for (let i = 1; i <= numberOfTiles; i++) {
       newTile = document.createElement('div');
       newTile.id = `tile${i}`;
       newTile.setAttribute('index', i);
       newTile.innerHTML = i;
-      newTile.style.backgroundImage = `url(/resources/sliding-puzzle/${arg}/${i}.jpg)`;
+      newTile.style.backgroundImage = `url(/resources/sliding-puzzle/${theme}/${i}.jpg)`;
       newTile.classList.add('tile');
       newTile.addEventListener('click', function () {
           swap(parseInt(this.getAttribute('index')));
@@ -128,9 +132,9 @@ function setSelected(index) {
   currentTile.classList.remove('selected');
   newTile = document.getElementById(`tile${index}`);
   currentTile.innerHTML = newTile.innerHTML;
-  currentTile.style.backgroundImage = `url(/resources/sliding-puzzle/${arg}/${newTile.innerHTML}.jpg)`;
+  currentTile.style.backgroundImage = `url(/resources/sliding-puzzle/${theme}/${newTile.innerHTML}.jpg)`;
   newTile.innerHTML = currentTileText;
-  newTile.style.backgroundImage = `url(/resources/sliding-puzzle/${arg}/${currentTile}.jpg)`;
+  newTile.style.backgroundImage = `url(/resources/sliding-puzzle/${theme}/${currentTile}.jpg)`;
   newTile.classList.add("selected");
   highlighted = index;
 }
