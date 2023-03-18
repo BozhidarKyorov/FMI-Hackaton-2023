@@ -1,4 +1,4 @@
-dialog
+dialog/choice
 Cyrcling around half the castle, there is still nothing but stone.
 <image count>
 <link to image>*<image count>
