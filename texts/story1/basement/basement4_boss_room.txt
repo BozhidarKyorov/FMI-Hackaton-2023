@@ -1,0 +1,8 @@
+dialog
+The doors starts cracking and opens in front of them. Inside they can see a massive pile of gold coins at the end of it, but a moment later a massive goose with 5 heads lands between them and the gold. The goose honks in their face and strangely the pirates can understand it. The geedra ask them a question.
+0
+1
+Hear the question
+./texts/story1/text_games/logical/boss.txt
+default
+0

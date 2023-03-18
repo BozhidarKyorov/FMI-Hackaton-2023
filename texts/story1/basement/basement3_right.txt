@@ -1,0 +1,9 @@
+dialog
+Going left, the group sees a helmet on the ground. When they get closer, they recognize the head of the knight from earlier. Here is the lost head rolling around. It asks them a question.
+<image>
+<imagenum>
+1
+See the question
+./texts/quizes/quiz1.txt
+default
+0

@@ -1,6 +1,7 @@
-dialog
+dialog/choice
 After pushing the gate for a couple of seconds, the pirates realized that the door is not locked, it was just stuck. Pushing for a couple of minutes they manage to open a crack large enough to go through it. The great effort that took to open the gate exhausted them and one of the pirates have a sore shoulder and can hardly move his hand for a while.
-0
+<image count>
+<link to image>*<image count>
 1
 Continue to the castle
 ./texts/story1/gate/behind_the_gate.txt

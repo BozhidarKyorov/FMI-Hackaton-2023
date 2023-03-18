@@ -1,6 +1,7 @@
-dialog
+dialog/choice
 Going around the wall, the pirates see a continuous wall of stone with empty towers.
-0
+<image count>
+<link to image>*<image count>
 1
 Continue around
 ./texts/story1/gate/castle_gate_around_2.txt
