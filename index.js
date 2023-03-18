@@ -141,8 +141,8 @@ async function openQuiz(arrayWithArguments) {
   p.textContent = quiztext
   container.appendChild(p)
 
-  let randLogicIndex = 1 /*Math.floor(Math.random() * 10 + 1)*/
-  let logicQuizArguments = await getContent('texts/logicTests/' + randLogicIndex + '.txt')
+  let randLogicIndex = Math.floor(Math.random() * 15 + 1)
+  let logicQuizArguments = await getContent('texts/story1/text_games/logical/' + randLogicIndex + '.txt')
 
   askLogicQuestion(logicQuizArguments.split("\r\n"), next_link)
 
@@ -151,8 +151,6 @@ async function openQuiz(arrayWithArguments) {
 
 function askLogicQuestion(logicQuizArguments, link_next) {
   let answerDiv = document.createElement('div')
-
-  //debugger
 
   let logicText = logicQuizArguments[1]
   let logicTextP = document.createElement('p')
@@ -178,9 +176,9 @@ function askLogicQuestion(logicQuizArguments, link_next) {
         returning.textContent += '\nWrong answer! -1 heart!'
       } else {
         returning.textContent += '\nCorrect answer!'
-        console.log('correct')
       }
       container.appendChild(returning)
+      
       loadModule(link_next)
     })
     buttonDiv.appendChild(button)
@@ -192,6 +190,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   answerDiv.appendChild(buttonDiv)
 
   container.appendChild(answerDiv)
+  answerDiv.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
 function loadSlidingPuzzle(theme) {

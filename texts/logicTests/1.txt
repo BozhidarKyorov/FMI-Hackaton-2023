@@ -1,9 +1,0 @@
-quiz
-this is the quiz text
-3
-0
-this is the first answer
-0
-this is the second answer
-1
-this is the correct answer

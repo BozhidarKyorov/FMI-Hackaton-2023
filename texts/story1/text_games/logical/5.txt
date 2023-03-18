@@ -1,7 +1,11 @@
 logical
 In which country is the Suez Canal located?
 4
-1 Egypt
-0 Algeria
-0 Saudi Arabia
-0 South Africa
+1
+Egypt
+0
+Algeria
+0
+Saudi Arabia
+0
+South Africa

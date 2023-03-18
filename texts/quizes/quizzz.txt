@@ -1,4 +1,4 @@
 logic quiz
 0
 it's logic test time
-texts/story1/basement/basement_q1.txt
+texts/quizes/quizzz.txt

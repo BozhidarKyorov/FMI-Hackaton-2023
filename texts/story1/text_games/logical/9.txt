@@ -1,7 +1,11 @@
 logical
 In Greek mythology, Narcissus fell in love with his own image when it was reflected in what?
 4
-0 A mirror
-0 Cat's eyes
-1 A pool of water
-0 A spoon
+0
+A mirror
+0
+Cat's eyes
+1
+A pool of water
+0
+A spoon

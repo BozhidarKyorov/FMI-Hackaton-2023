@@ -1,7 +1,11 @@
 logical
 Who was the first human to journey into space?
 4
-0 Neil Armstrong
-0 Alan Shepard
-1 Yuri Gagarin
-0 Georgi Ivanov
+0
+Neil Armstrong
+0
+Alan Shepard
+1
+Yuri Gagarin
+0
+Georgi Ivanov

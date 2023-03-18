@@ -1,7 +1,11 @@
 logical
 What is the highest-grossing R-rated movie of all time?
 4
-1 Joker
-0 The Matrix Reloaded
-0 It
-0 Deadpool 2
+1
+Joker
+0
+The Matrix Reloaded
+0
+It
+0
+Deadpool 2

@@ -1,7 +1,11 @@
 logical
 In which city would you find La Sagrada Familia?|Barcelona
 4
-0 Valencia
-1 Barcelona
-0 Lisbon
-0 Madrid
+0
+Valencia
+1
+Barcelona
+0
+Lisbon
+0
+Madrid

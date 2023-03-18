@@ -1,7 +1,11 @@
 logical
 How many timezones does Russia have?
 4
-1 11
-0 8
-0 10 
-0 12
+1
+11
+0
+8
+0
+10 
+0
+12

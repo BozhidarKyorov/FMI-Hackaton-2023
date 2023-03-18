@@ -1,7 +1,11 @@
 logical
 Which of the following actors hasn't played in the role of Spiderman in a movie?
 3
-0 Tom Holland
-1 Timothee Chalamet
-0 Andrew Garfield
-0 Tobey Maguire
+0
+Tom Holland
+1
+Timothee Chalamet
+0
+Andrew Garfield
+0
+Tobey Maguire

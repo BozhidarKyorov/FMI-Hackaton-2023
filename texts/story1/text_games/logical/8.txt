@@ -1,7 +1,11 @@
 logical
 Which of the following names is not of one of Kim Kardashian and Kanye West's kids?
 4
-0 Chicago
-1 Stormi
-0 Psalm
-0 North
+0
+Chicago
+1
+Stormi
+0
+Psalm
+0
+North

@@ -1,7 +1,11 @@
 logical
 Which ocean does not border Asia's coasts?
 4
-0 The Indian ocean
-0 The Arctic ocean
-0 The Pacific ocean
-1 The Atlantic ocean
+0
+The Indian ocean
+0
+The Arctic ocean
+0
+The Pacific ocean
+1
+The Atlantic ocean

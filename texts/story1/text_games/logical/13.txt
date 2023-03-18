@@ -1,7 +1,11 @@
 logical
 What element is Hg on the periodic table?s
 4
-0 Oxygen
-1 Mercury
-0 Rubidium
-0 Helium
+0
+Oxygen
+1
+Mercury
+0
+Rubidium
+0
+Helium
