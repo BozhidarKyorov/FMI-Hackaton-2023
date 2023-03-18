@@ -4,14 +4,14 @@ The gate rises to the skies. Tall around 8 meters and the wall above it - 12, th
 <link to image>*<image count>
 3
 Go around and look for another enterance
-<button link 1>
+./texts/story1/gate/castle_gate_around1.txt
 curiosity
 5
 Try to force open the gate
-<button link 2>
+./texts/story1/gate/castle_gate_force.txt
 anger
 5
 Knock on the gate
-<button link 3>
+./texts/story1/gate/castle_gate_knock.txt
 default
 0

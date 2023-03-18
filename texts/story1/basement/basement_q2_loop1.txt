@@ -4,6 +4,6 @@ The sign tell you that the exit is that way and the knight points back to the st
 <link to image>*<image count>
 1
 Go to the stairs
-<button link 1>
+./texts/story1/basement/basement_q2_loop2.txt
 default
 0

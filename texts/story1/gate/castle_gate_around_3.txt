@@ -4,6 +4,6 @@ The pirates are almost to the main gate by this point. It seems there is only on
 <link to image>*<image count>
 1
 Back to the gate
-<button link 1>
+./texts/story1/gate/castle_gate.txt
 default
 0

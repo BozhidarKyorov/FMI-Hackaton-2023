@@ -4,6 +4,6 @@ After pushing the gate for a couple of seconds, the pirates realized that the do
 <link to image>*<image count>
 1
 Continue to the castle
-<button link 1>
+./texts/story1/gate/behind_the_gate.txt
 default
 0

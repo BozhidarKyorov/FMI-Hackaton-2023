@@ -4,6 +4,6 @@ Knocking on the door, the pirates expected nothing to happen. After waiting for 
 <link to image>*<image count>
 1
 Continue to the castle
-<button link 1>
+./texts/story1/gate/behind_the_gate.txt
 kindness
 5

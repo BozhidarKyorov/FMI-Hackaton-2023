@@ -4,10 +4,10 @@ The knight takes a more offensive pose making a step toward them. The text on th
 <link to image>*<image count>
 2
 Take the treasure
-<button link 1>
+./texts/story1/basement/basement_q2after_bad.txt
 default
 0
 Repair the prison cells
-<button link 2>
+./texts/story1/basement/basement_q2after_good.txt
 greed
 5
