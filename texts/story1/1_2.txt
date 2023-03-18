@@ -1,0 +1,11 @@
+dialog
+This is 1_2
+1
+img/story1/goosemon.png
+2
+Go into the forest
+texts/story1/1_1.txt
+0
+Go into the castle
+texts/story/1_2.txt
+0

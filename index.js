@@ -1,7 +1,6 @@
 import { openSlidingPuzzle } from './slidingPuzzles.js'
 
 
-
 var emotions = {
   anger: 0,
   loyalty: 0,
@@ -14,9 +13,10 @@ var emotions = {
 var container = document.getElementById('story')
 
 
-document.getElementById("starting_button").addEventListener('click', start())
+document.getElementById("starting_button").addEventListener('click', start)
 
 async function start() {
+  document.getElementById("starting_button").style.display = 'none'
   loadModule("begin.txt")
 }
 
@@ -26,15 +26,11 @@ async function loadModule(module) {
 
   var arrayWithArguments = data.split("\r\n")
 
-  console.log(arrayWithArguments)
-
   if(arrayWithArguments[0] == "dialog") {
     deserializeDialog(arrayWithArguments)
   } else if (arrayWithArguments[0] == "sliding puzzle") {
     openSlidingPuzzle(arrayWithArguments)
   }
-
-
 }
 
 async function getContent(file) {
@@ -63,17 +59,23 @@ function deserializeDialog(arrayWithArguments) {
     img.src = imageURLS[i]
     div.appendChild(img)
   }
+  
+  let buttonDiv = document.createElement('div')
 
   for(let i = 0; i < buttonsCount; i++) {
     let butt = document.createElement("button")
     butt.innerHTML = buttons[i].content
-    butt.onclick = function() {
+    butt.addEventListener('click', () => {
       emotions[buttons[i].emotion] += Number.parseInt(buttons[i].modifier)
       loadModule(buttons[i].link)
-    }
-    div.appendChild(butt)
+      buttonDiv.style.display = 'none'
+    })
+    buttonDiv.appendChild(butt)
   }
+  div.appendChild(buttonDiv)
   container.appendChild(div)
+  div.scrollIntoView({ behavior: "smooth", block: "end" })
+  //div.scrollTop = 0
 }
 
 function getImagesInfo(arrayWithArguments, imageCount) {
@@ -106,5 +108,5 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 }
 
 function loadSlidingPuzzle(arrayWithArguments) {
-
+  
 }
