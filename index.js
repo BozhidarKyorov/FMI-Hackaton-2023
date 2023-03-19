@@ -6,7 +6,7 @@ const removeText = "remove";
 var hasWon = false;
 var emotions = {
   anger: 0,
-  loyalty: 0,
+  quriosity: 0,
   kindness: 0,
   greed: 0,
   compassion: 0,
@@ -65,11 +65,15 @@ function loseLife() {
 
 async function loadModule(module) {
 
+  if(isGameOver) {
+    
+  }
+
   let data = await getContent(module)
 
   var arrayWithArguments = data.split("\r\n")
   console.log(arrayWithArguments[0])
-
+  
   if(arrayWithArguments[0] == "dialog") {
     deserializeDialog(arrayWithArguments)
   } else if (arrayWithArguments[0] == "sliding_puzzle") {
@@ -80,13 +84,15 @@ async function loadModule(module) {
     loadBossFight(arrayWithArguments)
   } else if (arrayWithArguments[0] == 'memory_puzzle') {
     document.getElementById("sliding").classList.add(removeText);
-    removeTilesSlidingPuzzle();
+    //removeTilesSlidingPuzzle()
     loadMemoryGame()
     loadModule(arrayWithArguments[1])
   } else if (arrayWithArguments[0] == 'end') {
     let imgDiv = document.createElement('div')
     imgDiv.classList.add('img_container')
     let ending = document.createElement('h3')
+    lives = 0;
+    isGameOver() 
     if(arrayWithArguments[2] != 'null') {
       let img = document.createElement('img')
       img.src = arrayWithArguments[2]
@@ -200,12 +206,14 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 
 function SlidingPuzzle(arrayWithArguments) {
   //console.log(arrayWithArguments)
-  debugger
+  
   loadSlidingPuzzle(arrayWithArguments[1])
   loadModule(arrayWithArguments[2])
 }
 
 async function openQuiz(arrayWithArguments) {
+
+  console.log(arrayWithArguments)
 
   let quiztext = arrayWithArguments[2]
   let next_link = arrayWithArguments[3]
@@ -219,7 +227,6 @@ async function openQuiz(arrayWithArguments) {
 
   askLogicQuestion(logicQuizArguments.split("\r\n"), next_link)
 
-  
 }
 
 function askLogicQuestion(logicQuizArguments, link_next) {
@@ -235,6 +242,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   for(let i = 0; i < answersCount * 2; i += 2) {
 
     let correct = Number.parseInt(logicQuizArguments[3 + i])
+    console.log(correct)
     let answerText = logicQuizArguments[3 + i + 1]
     let button = document.createElement('button')
     button.textContent = answerText
@@ -246,7 +254,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
       returning.classList.add('picked_answer')
       returning.textContent = button.textContent
       if(correct == 0) {
-        lives--
+        loseLife()
         returning.textContent += '\nWrong answer! -1 heart!'
       } else {
         returning.textContent += '\nCorrect answer!'
@@ -294,7 +302,24 @@ function loadMemoryGame() {
 
 function isGameOver() {
   if(lives === 0) {
-    // ekran gori
+    
+    let endScreen = document.createElement("div")
+    let gameOverTitle = document.createElement('h2')
+    gameOverTitle.textContent = "Game Over!"
+
+    let emotionsP = document.createElement('p')
+    emotionsP.classList.add("final_result")
+    emotionsP.textContent += "Anger: " + emotions.anger + " out of 50"
+    emotionsP.textContent += "\nGreed: " + emotions.greed + " out of 50"
+    emotionsP.textContent += "\nKindness: " + emotions.kindness + " out of 50"
+    emotionsP.textContent += "\nCuriosity: " + emotions.quriosity + " out of 50"
+    emotionsP.textContent += "\nCompasion: " + emotions.compassion + " out of 50"
+    
+    container.appendChild(endScreen)
+    endScreen.appendChild(gameOverTitle)
+    endScreen.appendChild(emotionsP)
+
+    return true;
   }
   else return false;
 }
@@ -342,6 +367,8 @@ function loadBossFight(args) {
   }
   div.appendChild(buttonDiv)
   container.appendChild(div)
+  div.scrollIntoView({ behavior: "smooth", block: "end" })
+  div.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
 function removeTilesSlidingPuzzle() {
