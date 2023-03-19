@@ -3,6 +3,6 @@ Once upon a time there was a group of pirates looking for forgotten riches in a 
 0
 1
 Continue to the gate
-./texts/story1/gate/castle_gate.txt
+/texts/story1/gate/castle_gate.txt
 default
 0
