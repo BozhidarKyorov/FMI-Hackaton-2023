@@ -89,6 +89,8 @@ async function loadModule(module) {
     let imgDiv = document.createElement('div')
     imgDiv.classList.add('img_container')
     let ending = document.createElement('h3')
+    lives = 0;
+    isGameOver() 
     if(arrayWithArguments[2] != 'null') {
       let img = document.createElement('img')
       img.src = arrayWithArguments[2]
@@ -193,7 +195,7 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 
 function SlidingPuzzle(arrayWithArguments) {
   //console.log(arrayWithArguments)
-  debugger
+  
   loadSlidingPuzzle(arrayWithArguments[1])
   loadModule(arrayWithArguments[2])
 }
@@ -229,6 +231,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   for(let i = 0; i < answersCount * 2; i += 2) {
 
     let correct = Number.parseInt(logicQuizArguments[3 + i])
+    console.log(correct)
     let answerText = logicQuizArguments[3 + i + 1]
     let button = document.createElement('button')
     button.textContent = answerText
@@ -240,7 +243,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
       returning.classList.add('picked_answer')
       returning.textContent = button.textContent
       if(correct == 0) {
-        lives--
+        loseLife()
         returning.textContent += '\nWrong answer! -1 heart!'
       } else {
         returning.textContent += '\nCorrect answer!'
@@ -294,15 +297,16 @@ function isGameOver() {
     gameOverTitle.textContent = "Game Over!"
 
     let emotionsP = document.createElement('p')
-    emotionsP.textContent += "Anger: " + emotions.anger + "out of 50\n"
-    emotionsP.textContent += "Greed: " + emotions.greed + "out of 50\n"
-    emotionsP.textContent += "Kindness: " + emotions.kindness + "out of 50\n"
-    emotionsP.textContent += "Curiosity: " + emotions.quriosity + "out of 50\n"
-    emotionsP.textContent += "Compasion: " + emotions.compassion + "out of 50\n"
+    emotionsP.classList.add("final_result")
+    emotionsP.textContent += "Anger: " + emotions.anger + " out of 50"
+    emotionsP.textContent += "\nGreed: " + emotions.greed + " out of 50"
+    emotionsP.textContent += "\nKindness: " + emotions.kindness + " out of 50"
+    emotionsP.textContent += "\nCuriosity: " + emotions.quriosity + " out of 50"
+    emotionsP.textContent += "\nCompasion: " + emotions.compassion + " out of 50"
+    
+    container.appendChild(endScreen)
     endScreen.appendChild(gameOverTitle)
     endScreen.appendChild(emotionsP)
-
-    container.appendChild(endScreen)
 
     return true;
   }
@@ -352,6 +356,8 @@ function loadBossFight(args) {
   }
   div.appendChild(buttonDiv)
   container.appendChild(div)
+  div.scrollIntoView({ behavior: "smooth", block: "end" })
+  div.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
 function removeTilesSlidingPuzzle() {

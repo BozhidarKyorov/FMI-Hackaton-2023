@@ -3,6 +3,6 @@ Going left, the group sees a helmet on the ground. When they get closer, they re
 0
 1
 See the question
-./texts/quizes/quiz1.txt
+./texts/quizes/qiuz1.txt
 default
 0
