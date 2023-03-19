@@ -46,6 +46,8 @@ async function loadModule(module) {
     SlidingPuzzle(arrayWithArguments)
   } else if (arrayWithArguments[0] == "logic quiz") {
     openQuiz(arrayWithArguments)
+  } else if (arrayWithArguments[0] == "boss fight") {
+    loadBossFight(arrayWithArguments)
   }
 }
 
@@ -205,4 +207,8 @@ function isGameOver() {
     // ekran gori
   }
   else return false;
+}
+
+function loadBossFight(args) {
+
 }
