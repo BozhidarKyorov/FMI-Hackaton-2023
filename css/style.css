@@ -1,14 +1,13 @@
-@font-face {
-    font-family: font2;
-    src: url("./../resources/Beyond_Wonderland.ttf");
-}
+
 p {
     font-weight: 800;
 }
 
 .main-title {
     font-size: 100px;
-    font-family: font2;
+   margin-top:15%;
+   text-align: end;
+    margin-left: 50%;
 }
 .main_container {
     width: 70%;
