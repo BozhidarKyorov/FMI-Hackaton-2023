@@ -1,1 +1,23 @@
-<>
+boss fight
+<intereagl photo>
+<img count>
+<image link>
+4
+~1
+./texts/story1/end
+default
+0
+~2
+./texts/story1/good
+default
+0
+~3
+./texts/story1/end
+default
+0
+~4
+./texts/story1/end
+default
+0
+
+
