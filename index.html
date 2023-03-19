@@ -7,8 +7,9 @@
         <link rel="stylesheet" type='text/css' media='screen' href="css/sliding-puzzle.css">
         <link rel="stylesheet" type='text/css' media='screen' href="css/style.css">
         <link rel="stylesheet" type='text/css' media='screen' href="css/games.css">
-        <title>Document</title>
-
+        <link rel="stylesheet" type='text/css' media='screen' href="./css/memory-game.css">
+        <link rel="icon" type="image/x-icon" href="/resources/icon.ico">
+        <title>Once upon a time...</title>
     </head>
 
 <body>
@@ -17,10 +18,12 @@
         <button id="starting_button">Click me</button>
         <button id="start-game">start game</button>
         <div id="story"></div>
-        <button id="play-game">game</button>
+        <button id="play-game-sliding">sliding</button>
+        <button id="play-game-memory">memory</button>
     </div>
     <div class="popup hint remove" id="hint-popup"> 
-            <div class="game-board">
+        <div id="game-main-container" class="game-board remove">
+            <div id="sliding" class="remove">
                 <div id="tiles"> </div>
                 <div class="under game-board">
                     <div class="game-btns">
@@ -28,13 +31,25 @@
                             <span class="btn">Show tile numbers</span>
                         </div>
                     </div>
-                    <div id="giveup-btn" class="game btn" title="This will cost you a life">
-                        <span class="btn">Give up</span>
-                    </div>
+            </div>
+            </div>
+        <div id="memory" class="game-memory remove">
+            <div class="controls">
+                <button id="start-memory">Start</button>
+                <div class="stats">
+                    <div class="timer">time: 0 sec</div>
                 </div>
-      <!-- <span id="notice">Notice: 3 extra seconds would be added to your time.</span> --> 
+            </div>
+            <div class="board-container">
+                <div id="board-memory" class="board" data-dimension="4"></div>
+                <div class="win">You won!</div>
+            </div>
+            </div>
+            <div id="giveup-btn" class="game btn" title="This will cost you a life">
+                <span class="btn">Give up</span>
+            </div>
+        </div>
     </div>
-</div>
     <script defer src="index.js" type="module"></script>
 
 </body>

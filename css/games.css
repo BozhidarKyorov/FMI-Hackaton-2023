@@ -1,8 +1,7 @@
 .popup {
-    position: absolute;
-    top: -25%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    position:fixed;
+    top: 100px;
+    left: 500px;
     width: 400px;
     padding: 20px;
     background: #FFF;
@@ -10,9 +9,6 @@
     box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
     margin-top: -25px;
     text-align: center;
-    transition: top 0ms ease-in-out 300ms,
-        opacity 300ms ease-in-out,
-        margin-top 300ms ease-in-out;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -37,10 +33,7 @@ body.active-popup .main {
 }
 
 body.active-popup .popup {
-    top: -15%;
+   
     opacity: 1;
     margin-top: 0px;
-    transition: top 0ms ease-in-out 0ms,
-        opacity 300ms ease-in-out,
-        margin-top 300ms ease-in-out;
 }
