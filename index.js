@@ -25,14 +25,15 @@ document.getElementById("giveup-btn").addEventListener('click', () => {
     removeTilesSlidingPuzzle();
    
   }
-  if(document.getElementById("sliding").classList.contains(removeText)) {
+  else if(document.getElementById("sliding").classList.contains(removeText))
+  {
     document.getElementById("memory").classList.add(removeText);
     restartGame();
     console.log("giveup memory")
   }
   hasWon = false;
   loseLife();
-isGameOver();
+  isGameOver();
 })
 
 document.getElementById("play-game-sliding").addEventListener("click", () => {
@@ -65,15 +66,21 @@ async function loadModule(module) {
   let data = await getContent(module)
 
   var arrayWithArguments = data.split("\r\n")
+  console.log(arrayWithArguments[0])
 
   if(arrayWithArguments[0] == "dialog") {
     deserializeDialog(arrayWithArguments)
-  } else if (arrayWithArguments[0] == "sliding puzzle") {
+  } else if (arrayWithArguments[0] == "sliding_puzzle") {
     SlidingPuzzle(arrayWithArguments)
   } else if (arrayWithArguments[0] == "logic quiz") {
     openQuiz(arrayWithArguments)
   } else if (arrayWithArguments[0] == "boss fight") {
     loadBossFight(arrayWithArguments)
+  } else if (arrayWithArguments[0] == 'memory_puzzle') {
+    document.getElementById("sliding").classList.add(removeText);
+    removeTilesSlidingPuzzle();
+    loadMemoryGame()
+    loadModule(arrayWithArguments[1])
   } else if (arrayWithArguments[0] == 'end') {
     let imgDiv = document.createElement('div')
     imgDiv.classList.add('img_container')
@@ -181,7 +188,10 @@ function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
 
 
 function SlidingPuzzle(arrayWithArguments) {
-  openSlidingPuzzle(arrayWithArguments[1])
+  //console.log(arrayWithArguments)
+  debugger
+  loadSlidingPuzzle(arrayWithArguments[1])
+  loadModule(arrayWithArguments[2])
 }
 
 async function openQuiz(arrayWithArguments) {
@@ -246,11 +256,18 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   answerDiv.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
-async function loadSlidingPuzzle(theme) {
-  let result = await openSlidingPuzzle(theme)
+function loadSlidingPuzzle(theme) {
+    document.getElementById("hint-popup").classList.remove(removeText);
+    document.getElementById("sliding").classList.remove(removeText);
+    document.body.classList.add("active-popup");
+    console.log("hi")
+    sliding(theme);
+}
+
+function sliding(theme){
+  let result = openSlidingPuzzle(theme)
   if(hasWonGame()) {
     console.log("official win");
-    
   }
 }
 

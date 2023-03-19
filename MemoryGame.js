@@ -7,6 +7,9 @@ const selectors = {
     win: document.querySelector('.win')
 }
 
+var items
+var picks = []
+
 const state = {
     gameStarted: false,
     flippedCards: 0,
