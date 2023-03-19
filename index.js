@@ -1,9 +1,9 @@
-import { openSlidingPuzzle } from './slidingPuzzles.js'
+import { openSlidingPuzzle, hasWonGame } from './slidingPuzzles.js'
 import { openMemoryGame, restartGame } from './MemoryGame.js'
 
 var lives = 3;
 const removeText = "remove";
-
+var hasWon = false;
 var emotions = {
   anger: 0,
   loyalty: 0,
@@ -23,12 +23,15 @@ document.getElementById("giveup-btn").addEventListener('click', () => {
   if(document.getElementById("memory").classList.contains(removeText)) {
     document.getElementById("sliding").classList.add(removeText);
     removeTilesSlidingPuzzle();
+   
   }
-  else {
+  if(document.getElementById("sliding").classList.contains(removeText)) {
     document.getElementById("memory").classList.add(removeText);
     restartGame();
+    console.log("giveup memory")
   }
-  lives--;
+  hasWon = false;
+  loseLife();
 isGameOver();
 })
 
@@ -49,6 +52,12 @@ document.getElementById("play-game-memory").addEventListener("click", () => {
 async function start() {
   document.getElementById("starting_button").style.visibility = 'hidden'
   loadModule("texts/story1/gate/begin.txt")
+}
+
+function loseLife() {
+  lives--;
+  const remainingLives = document.getElementById("remaining-lives");
+  remainingLives.removeChild(remainingLives.firstElementChild);
 }
 
 async function loadModule(module) {
@@ -237,19 +246,20 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   answerDiv.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
-function loadSlidingPuzzle(theme) {
-
-if(openSlidingPuzzle(theme)) {
-  console.log("official win");
-  removeTilesMemoryGame
+async function loadSlidingPuzzle(theme) {
+  let result = await openSlidingPuzzle(theme)
+  if(hasWonGame()) {
+    console.log("official win");
+    
   }
 }
 
 function loadMemoryGame() {
-
-  if(openMemoryGame()) {
+  openMemoryGame()
+  if(hasWonGame()) {
     console.log("official win");
     removeTilesSlidingPuzzle();
+    hasWon = false;
     }
   }
 

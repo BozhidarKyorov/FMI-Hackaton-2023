@@ -52,3 +52,13 @@ p {
     display: flex;
 }
 
+#remaining-lives {
+    position: fixed;
+    top:0;
+    right:15px;
+}
+
+.life {
+    width: 50px;
+    margin-top: 15px;
+}
