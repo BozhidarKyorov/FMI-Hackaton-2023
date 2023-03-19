@@ -1,6 +1,7 @@
 dialog
 The gate rises to the skies. Tall around 8 meters and the wall above it - 12, the pirates are faced with the difficult choice: How to enter the castle?
-0
+1
+img/story1/castle.png
 3
 Go around the castle
 ./texts/story1/gate/castle_gate_around_1.txt

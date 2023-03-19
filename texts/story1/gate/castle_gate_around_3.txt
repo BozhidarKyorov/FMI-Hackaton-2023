@@ -1,6 +1,7 @@
 dialog
 The pirates are almost to the main gate by this point. It seems there is only one entrance to the wall.
-0
+1
+img/story1/wall.png
 1
 Back to the gate
 ./texts/story1/gate/castle_gate.txt

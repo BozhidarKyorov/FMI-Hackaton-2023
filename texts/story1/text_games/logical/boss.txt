@@ -4,19 +4,19 @@ texts/story1/text_games/logical/boss.png
 img/story1/goosemon.png
 4
 ~1
-./texts/story1/end.txt
+./texts/story1/end/end_bad.txt
 default
 0
 ~2
-./texts/story1/good.txt
+./texts/story1/end/end_good.txt
 default
 0
 ~3
-./texts/story1/end.txt
+./texts/story1/end/end_bad.txt
 default
 0
 ~4
-./texts/story1/end.txt
+./texts/story1/end/end_bad.txt
 default
 0
 

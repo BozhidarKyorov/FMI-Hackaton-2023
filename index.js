@@ -48,7 +48,7 @@ document.getElementById("play-game-memory").addEventListener("click", () => {
 
 async function start() {
   document.getElementById("starting_button").style.display = 'none'
-  loadModule("pickstory.txt")
+  loadModule("texts/story1/gate/castle_gate.txt")
 }
 
 async function loadModule(module) {
@@ -65,6 +65,10 @@ async function loadModule(module) {
     openQuiz(arrayWithArguments)
   } else if (arrayWithArguments[0] == "boss fight") {
     loadBossFight(arrayWithArguments)
+  } else if (arrayWithArguments[0] == 'end') {
+    let ending = document.createElement('h3')
+    ending.textContent = arrayWithArguments[1]
+    container.appendChild(ending)
   }
 }
 
@@ -237,15 +241,44 @@ function isGameOver() {
 
 function loadBossFight(args) { 
   
-  let boss
+  console.log(args)
 
+  let integral = args[1]
+  let bossImage = args[3]
+  let imgCount = Number.parseInt(args[2])
+  let buttonCount = Number.parseInt(args[3 + imgCount])
 
+  let div = document.createElement('div')
+  let integralImg= document.createElement('img')
+  integralImg.src = integral
+  let bossImg = document.createElement('img')
+  bossImg.src = bossImage
+  div.appendChild(integralImg)
+  div.appendChild(bossImg)
+
+  let buttonDiv = document.createElement('div')
+ 
+  for(let i = 0; i < buttonCount * 4; i += 4) {
+    let button = document.createElement('button')
+    button.textContent = args[4 + imgCount + i]
+    button.classList.add('answer_button')
+    button.addEventListener('click', () => {
+      //console.log(args[5 + imgCount + i])
+      loadModule(args[5 + imgCount + i])
+      if(args[8+imgCount+i] == '0') {
+          life--;
+          isGameOver()
+      }
+      buttonDiv.style.display = 'none'
+      emotions[args[6 + imgCount + i]] += Number.parseInt(args[7 + imgCount + i])
+    })
+    buttonDiv.appendChild(button)
+  }
+  div.appendChild(buttonDiv)
+  container.appendChild(div)
 }
 
 function removeTilesSlidingPuzzle() {
   document.getElementById("tiles").innerHTML = "";
 }
 
-function removeTilesMemoryGame() {
-  //document.getElementById("board-memory").innerHTML = "";
-}
