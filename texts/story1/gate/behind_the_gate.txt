@@ -1,6 +1,7 @@
 dialog
 Behind the gates, the group sees the big castle raisning in front of them. There are stairs to the main door and a path around the castle that leads to the underground level at the left side. 
-0
+1
+img/story1/casleInside.png
 2
 Go up the stairs
 <button link 1>
