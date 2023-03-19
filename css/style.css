@@ -1,6 +1,7 @@
 
 p {
     font-weight: 800;
+    font-size:20px;
 }
 
 .main-title {
@@ -69,13 +70,16 @@ justify-content: center;
     text-align: justify;
     align-items: center;
     font-size: 30px;
+    border-radius: 10px;
+background-color: #ddb56ac0;
+padding: 15px;
 
 }
 
 .odd {
    align-items: flex-end;
     justify-content: flex-end;
-    margin-left: 70%;
+    margin-left: 60%;
 }
 
 .button_div {
@@ -94,4 +98,5 @@ justify-content: center;
 }
 
 .story-chapter p {
-    font-size:30px;
+    font-size:30px; }
+
