@@ -1,7 +1,6 @@
 dialog/choice
 Going back to the entrance, the pirates are thinking if they should go back down. Maybe the knight would not remember them.
-<image count>
-<link to image>*<image count>
+0
 1
 Go back
 ./texts/story1/basement/basement_q1.txt

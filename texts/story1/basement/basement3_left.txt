@@ -1,7 +1,6 @@
 dialog
 Going left, the group is faced by the same knight with the same missing head no his shouders. He hold a new sign in his arms with a question.
-<image>
-<imagenum>
+0
 1
 See the question
 ./texts/quizes/quiz1.txt

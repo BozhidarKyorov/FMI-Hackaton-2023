@@ -1,7 +1,6 @@
-dialog/choice
+dialog
 The sign turns blank for a moment then the knight disappears as the door behind them opens with cracking noise.
-<image count>
-<link to image>*<image count>
+0
 1
 Continue
 ./texts/story1/basement/basement2_hall.txt
