@@ -1,0 +1,11 @@
+dialog
+Lucien proposes piece and gives Amelia the decision to be his wife again.
+0
+2
+Amelia accepts the proposal. She shows the people of the empire more of her skills.
+quiz8
+0
+Amelia is still very prideful. She declines the offer.
+quiz9
+def
+0

@@ -1,0 +1,13 @@
+dialog
+Amelia locks the cat in her bathroom and goes to sleep. However, the cat is not happy with her decision and starts making annoying noises. As a result, Amelia gets annoyed and decides to bring the cat into Lucien's room. Amelia goes into Lucien's room followed by the cat that has annoyed her. Surprisingly, upon entering the room, she sees that her not-so-favourite husband is not there. She looks around in shock and notices some dust on the floor near his bed. The dust, though, is not regular dust to her. She knows perfectly well that the deep black colour of the dust is a direct sign that someone from the Night Court - a place full of evil vindictive warriors, has come and kidnapped the new king. Still in shock, Amelia looks at the cat and something that her grandmother has told her a long time ago hits her: "Cats always remember where they have come from." Looking at the pitch black cat, she realises that it has been sent from the Night Court to help her trace her husband and fight for his life and freedom.
+<image count>
+<link to image>*<image count>
+2
+Amelia follows the cat and tries to find and free her husband because she feels she is obliged to do so as the queen.
+quiz1
+default
+0
+Amelia decides to rule the empire on her own and leave her husband to deal with his problems alone.
+1_6
+def
+0
