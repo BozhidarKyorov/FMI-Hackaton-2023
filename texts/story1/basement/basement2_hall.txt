@@ -1,7 +1,7 @@
 dialog
 Going in, they are in a large and long hall. On the walls are scattered closed empty cells. In some of them there is bones lying on the floor. The halls ends with a large pit.
 1
-img/story1/dubgeon.png
+img/story1/cells.png
 Solve puzzle
 ./texts/story1/basement/basement2_pit_puzzle.txt
 default
