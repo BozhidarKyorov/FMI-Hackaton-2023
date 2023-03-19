@@ -7,6 +7,6 @@ Go left
 default
 0
 Go right
-./texts/story1/basement/basement3_left.txt
+./texts/story1/basement/basement3_right.txt
 default
 0
