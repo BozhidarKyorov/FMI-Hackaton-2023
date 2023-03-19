@@ -6,8 +6,8 @@
 }
 
 .answer_button {
-    background-color: #34271f;
-    border: solid 1px black;
+    /*background-color: #34271f;
+    border: solid 1px black;  */
     width: 200px;
     height: 60px;
     margin-left: 25px ;
@@ -22,6 +22,17 @@
 
 .story {
     justify-content: center;
-    display: flex;
+    display: grid;
+    align-items: center;
     flex-direction: row;
+}
+
+.title {
+    align-items: center;
+    justify-content: center;
+}
+
+.story-chapter {
+    justify-content: center;
+    display: flex;
 }

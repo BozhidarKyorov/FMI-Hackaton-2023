@@ -103,9 +103,16 @@ function deserializeDialog(arrayWithArguments) {
   let buttonDiv = document.createElement('div')
 
   for(let i = 0; i < buttonsCount; i++) {
-    let butt = document.createElement("button")
-    butt.innerHTML = buttons[i].content
-    butt.classList.add("answer_button")
+    let butt = document.createElement("div")
+    let sp = document.createElement("span");
+    sp.classList.add("btn")
+   
+    sp.innerHTML = buttons[i].content
+    butt.appendChild(sp)
+    butt.classList.add("answer_button");
+    butt.classList.add("game");
+    butt.classList.add("btn");
+    
     butt.addEventListener('click', () => {
       emotions[buttons[i].emotion] += Number.parseInt(buttons[i].modifier)
       loadModule(buttons[i].link)
