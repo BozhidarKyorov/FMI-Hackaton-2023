@@ -237,6 +237,9 @@ function isGameOver() {
 
 function loadBossFight(args) { 
   
+  let boss
+
+
 }
 
 function removeTilesSlidingPuzzle() {
