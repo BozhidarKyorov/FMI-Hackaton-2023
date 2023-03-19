@@ -1,0 +1,12 @@
+dialog
+After one more long hour Amelia and Theodor get out of the forest and arrive near one creepy dark castle. Inside the castle they find Lucier chained to a wall trying to escape. To Amelia's surprise her husband looks at Theodor and starts shouting: "You fool! You got me in that position!" Amelia processes what she has heard in absolute shock. Theodor who has supossedly been helping her this whole time is the one that kidnapped her husband! The interesting thing, though, is that she is not sure if she really wants to take her husbands side or not.
+0
+2
+Amelia realises she has some kind of desire to get to know Theodore more and build a life with him. 
+1_5_1
+default
+0
+Amelia decides to stay loyal to her husband and keep her reputation. 
+1_5_2
+def
+0

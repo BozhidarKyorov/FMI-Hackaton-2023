@@ -1,0 +1,12 @@
+dialog
+Amelia feels extremely grateful for the help the cat has offered her along the way. They continue walking together but to Amelia's surprise the cat all of a sudden freezes and stares at her with its intimidating goldish eyes. Amelia stops at stares at the cat with amazement as it transforms into a charming young man. The man still has a cat's tale but other than that he is all human. The man introduces himself as Theodore and says that the tale helps him decide which way to take. There are two paths ahead of them. The right path is surrounded with green trees and flowers and the left path has a lot of stones and has a scary vibe to it. The man's tail points towards the left path but Amelia is still not sure whether to trust his intuition or not.
+0
+2
+Take the right path and do not trust his intuition. 
+quiz4
+default
+0
+Take the left path and trust his intuition.
+quiz5
+def
+0

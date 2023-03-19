@@ -1,0 +1,12 @@
+dialog
+Even though Amelia is not quite sure how the citizens of the empire will react to the news that their king is no longer in the picture, on the next day she finally builds up the courage to anounce her decision about ruling the empire solo. The people of the empire do not seem very happy with her decision since they want someone of their own blood to be in charge of them. They start protesting, shouting that she should leave the empire and leave the decision about who is going to rule the kingdom to them. In the midst of all this chaos a familiar face arrives. A man with a determined posture approches Amelia. She looks at him, a glimpse of suspicion showing in her eyes. She cannot hide her shock from recognising her missing husband's younger brother Aaron. And her shock only increases as she hears his proposal to her: "Do you want to become MY wife and secure your place in the empire?"
+0
+2
+Amelia accepts his offer because she realises this is the only way people from the empire might come to terms with her staying there.
+quiz6
+default
+0
+Amelia decides to rule the empire on her own and leave her husband to deal with his problems alone.
+quiz10
+def
+0
