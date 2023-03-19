@@ -47,8 +47,8 @@ document.getElementById("play-game-memory").addEventListener("click", () => {
 });
 
 async function start() {
-  document.getElementById("starting_button").style.display = 'none'
-  loadModule("texts/story1/gate/castle_gate.txt")
+  document.getElementById("starting_button").style.visibility = 'hidden'
+  loadModule("texts/story1/gate/begin.txt")
 }
 
 async function loadModule(module) {
@@ -115,11 +115,11 @@ function deserializeDialog(arrayWithArguments) {
     
     butt.addEventListener('click', () => {
       emotions[buttons[i].emotion] += Number.parseInt(buttons[i].modifier)
-      loadModule(buttons[i].link)
-      buttonDiv.style.display = 'none'
+      buttonDiv.style.visibility = 'hidden'
       let buttonAnswer = document.createElement('p')
       buttonAnswer.textContent = butt.innerText
       div.appendChild(buttonAnswer)
+      loadModule(buttons[i].link)
     })
     buttonDiv.appendChild(butt)
   }
@@ -198,7 +198,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
     button.classList.add('answer_button')
 
     button.addEventListener('click', () => {
-      buttonDiv.style.display = 'none'
+      buttonDiv.style.visibility = 'hidden'
       let returning = document.createElement('p')
       returning.textContent = button.textContent
       if(correct == 0) {
@@ -270,13 +270,13 @@ function loadBossFight(args) {
     button.textContent = args[4 + imgCount + i]
     button.classList.add('answer_button')
     button.addEventListener('click', () => {
-      //console.log(args[5 + imgCount + i])
+      
       loadModule(args[5 + imgCount + i])
       if(args[8+imgCount+i] == '0') {
           life--;
           isGameOver()
       }
-      buttonDiv.style.display = 'none'
+      buttonDiv.style.visibility = 'hidden'
       emotions[args[6 + imgCount + i]] += Number.parseInt(args[7 + imgCount + i])
     })
     buttonDiv.appendChild(button)

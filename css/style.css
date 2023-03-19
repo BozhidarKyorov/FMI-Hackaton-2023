@@ -1,3 +1,6 @@
+p {
+    font-weight: 800;
+}
 
 .main_container {
     width: 70%;
@@ -34,5 +37,9 @@
 
 .story-chapter {
     justify-content: center;
+}
+
+.button_div {
     display: flex;
 }
+

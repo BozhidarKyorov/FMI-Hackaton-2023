@@ -7,7 +7,7 @@ Go around the castle
 ./texts/story1/gate/castle_gate_around_1.txt
 curiosity
 5
-Try to force open the gate
+Force open the gate
 ./texts/story1/gate/castle_gate_force.txt
 anger
 5
