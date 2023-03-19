@@ -113,6 +113,7 @@ function deserializeDialog(arrayWithArguments) {
     buttonDiv.appendChild(butt)
   }
   div.appendChild(buttonDiv)
+  div.classList.add("story-chapter")
   container.appendChild(div)
   div.scrollIntoView({ behavior: "smooth", block: "end" })
 }
@@ -126,10 +127,9 @@ function getImagesInfo(arrayWithArguments, imageCount) {
 }
 
 function getButtonsInfo(arrayWithArguments, imageCount, buttonsCount) {
-  console.log(buttonsCount)
   let buttons = [];
 
-  for(let i = 0; i < buttonsCount * 4; i+=4) {
+  for(let i = 0; i < buttonsCount * 4; i += 4) {
     
     let tempButton = {
       content: "default",
