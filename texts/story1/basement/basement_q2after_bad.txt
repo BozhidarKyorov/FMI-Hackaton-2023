@@ -3,6 +3,6 @@ The sign turns blank as the knight swing with his arm, trying to hit one of the 
 0
 1
 Continue
-texts/story1/basement/mem_puz
+./texts/quizes/qiuz2.txt
 default
 0

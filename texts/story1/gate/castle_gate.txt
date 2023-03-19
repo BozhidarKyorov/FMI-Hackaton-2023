@@ -13,5 +13,5 @@ anger
 5
 Knock on the gate
 ./texts/story1/gate/castle_gate_knock.txt
-default
-0
+curiosity
+4
