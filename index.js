@@ -66,9 +66,19 @@ async function loadModule(module) {
   } else if (arrayWithArguments[0] == "boss fight") {
     loadBossFight(arrayWithArguments)
   } else if (arrayWithArguments[0] == 'end') {
+    let imgDiv = document.createElement('div')
+    imgDiv.classList.add('img_container')
     let ending = document.createElement('h3')
+    if(arrayWithArguments[2] != 'null') {
+      let img = document.createElement('img')
+      img.src = arrayWithArguments[2]
+      imgDiv.appendChild(img)
+    }
     ending.textContent = arrayWithArguments[1]
+
+    container.appendChild(imgDiv)
     container.appendChild(ending)
+    ending.scrollIntoView({ behavior: "smooth", block: "end" })
   }
 }
 
@@ -94,10 +104,13 @@ function deserializeDialog(arrayWithArguments) {
   div.appendChild(p)
 
   for(let i = 0; i < imageCount; i++) {
+    let imgDiv = document.createElement('div')
+    imgDiv.classList.add('img_container')
     let img = document.createElement("img")
     img.src = imageURLS[i]
     img.classList.add('img')
-    div.appendChild(img)
+    imgDiv.appendChild(img)
+    div.appendChild(imgDiv)
   }
   
   let buttonDiv = document.createElement('div')
@@ -200,6 +213,7 @@ function askLogicQuestion(logicQuizArguments, link_next) {
     button.addEventListener('click', () => {
       buttonDiv.style.visibility = 'hidden'
       let returning = document.createElement('p')
+      returning.classList.add('picked_answer')
       returning.textContent = button.textContent
       if(correct == 0) {
         lives--
@@ -261,8 +275,14 @@ function loadBossFight(args) {
   integralImg.src = integral
   let bossImg = document.createElement('img')
   bossImg.src = bossImage
-  div.appendChild(integralImg)
-  div.appendChild(bossImg)
+  let imgDiv1 = document.createElement('div')
+  imgDiv1.classList.add('img_container')
+  imgDiv1.appendChild(integralImg)
+  let imgDiv2 = document.createElement('div')
+  imgDiv2.classList.add('img_container')
+  imgDiv2.appendChild(bossImg)
+  div.appendChild(imgDiv1)
+  div.appendChild(imgDiv2)
 
   let buttonDiv = document.createElement('div')
  

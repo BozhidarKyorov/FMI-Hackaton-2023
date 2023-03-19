@@ -1,0 +1,12 @@
+dialog
+After the rather equal battle, although Amelia holds nothing but feelings of dislike towards Aaron, she is still impresed with his skills.
+0
+2
+She suggests they rule together since she realises they will be am extremely strong force side by side.
+1_11
+default
+0
+She decides she prefers to rule alone and she has trust only in herself.
+1_12
+def
+0

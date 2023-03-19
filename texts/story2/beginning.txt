@@ -1,0 +1,13 @@
+dialog
+The Empire of Koda has its people anticipating the upcoming corronation of King Lucien and the intimidating warrior and princess Amelia. Amelia, being the third daughter and the fifth-born child of Armour - king of the Sky Court, has known her whole life her chances of becoming queen in her kingdom were slight. That is why she has always used to stick with the warriors and has proven her courageous nature and love for justice. However, as she grew older, she realised the privileges she would get being a queen and accepted Lucien's proposal to rule his late father's kingdom with him. The proposal has been driven by Lucien's desparate desire to be able to ascend to the throne, since he would have never been able to do it without a queen by his side. After the wedding, Amelia goes into her chambers and finds her sheets which have clearly been messsed up with. She pulls them up and sees a cat, black as the night. Her magnificent goldish eyes have a misterious spark, yet they appear smart and calm. Amelia frowns.
+<image count>
+<link to image>*<image count>
+2
+Let the cat stay in Amelia's room. 
+1_2
+default
+0
+Amelia will go to Lucier's chambers and ask him if the cat is a part of yet another one of his jokes.
+1_3
+default
+0

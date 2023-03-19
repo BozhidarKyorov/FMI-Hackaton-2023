@@ -8,12 +8,21 @@ p {
     align-items: center;
 }
 
+.img_container {
+    display: flex;
+    justify-content: center;
+}
+
+.picked_answer {
+    font-size: 108px;
+}
+
 .answer_button {
     /*background-color: #34271f;
     border: solid 1px black;  */
-    width: 200px;
+    width: 250px;
     height: 60px;
-    margin-left: 25px ;
+    margin-left: 35px ;
     font-size: 20px;
     margin: 15px; 
 }
