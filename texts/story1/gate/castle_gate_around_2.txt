@@ -5,5 +5,5 @@ img/story1/wall.png
 1
 Continue around once more
 ./texts/story1/gate/castle_gate_around_3.txt
-default
-0
+curiosity
+5

@@ -5,5 +5,5 @@ img/story1/wall.png
 1
 Back to the gate
 ./texts/story1/gate/castle_gate.txt
-default
-0
+curiosity
+2

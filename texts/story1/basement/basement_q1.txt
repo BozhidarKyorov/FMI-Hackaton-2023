@@ -14,4 +14,4 @@ greed
 We are lost
 ./texts/story1/basement/basement_q2_loop1.txt
 greed
-2
+3

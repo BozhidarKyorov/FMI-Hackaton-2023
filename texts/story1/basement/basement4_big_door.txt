@@ -3,6 +3,6 @@ After 10 more minutes the group the hall widens and they can see large metal doo
 0
 1
 See the question
-./texts/quizes/quiz2.txt
+./texts/quizes/qiuz2.txt
 default
 0
