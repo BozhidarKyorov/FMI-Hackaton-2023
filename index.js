@@ -66,9 +66,19 @@ async function loadModule(module) {
   } else if (arrayWithArguments[0] == "boss fight") {
     loadBossFight(arrayWithArguments)
   } else if (arrayWithArguments[0] == 'end') {
+    let imgDiv = document.createElement('div')
+    imgDiv.classList.add('img_container')
     let ending = document.createElement('h3')
+    if(arrayWithArguments[2] != 'null') {
+      let img = document.createElement('img')
+      img.src = arrayWithArguments[2]
+      imgDiv.appendChild(img)
+    }
     ending.textContent = arrayWithArguments[1]
+
+    container.appendChild(imgDiv)
     container.appendChild(ending)
+    ending.scrollIntoView({ behavior: "smooth", block: "end" })
   }
 }
 

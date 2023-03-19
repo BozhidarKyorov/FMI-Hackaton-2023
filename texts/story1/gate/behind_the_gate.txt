@@ -4,7 +4,7 @@ Behind the gates, the group sees the big castle raisning in front of them. There
 img/story1/casleInside.png
 2
 Go up the stairs
-<button link 1>
+./texts/story1/basement/basement_q1.txt
 default
 0
 Go in the basement
