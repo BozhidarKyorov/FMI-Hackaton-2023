@@ -1,7 +1,15 @@
+@font-face {
+    font-family: font2;
+    src: url("./../resources/Beyond_Wonderland.ttf");
+}
 p {
     font-weight: 800;
 }
 
+.main-title {
+    font-size: 100px;
+    font-family: font2;
+}
 .main_container {
     width: 70%;
     margin: auto;
@@ -9,8 +17,6 @@ p {
 }
 
 .img_container {
-    display: flex;
-    justify-content: center;
 }
 
 .picked_answer {
@@ -33,10 +39,18 @@ p {
 }
 
 .story {
-    justify-content: center;
-    display: grid;
-    align-items: center;
-    flex-direction: row;
+   display: grid;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row; 
+   
+}
+
+.even {
+   align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 70%;
+    
 }
 
 .title {
@@ -44,8 +58,25 @@ p {
     justify-content: center;
 }
 
+.story .img {
+justify-content: center;
+}
 .story-chapter {
-    justify-content: center;
+   /* justify-content: center;*/
+    width: 600px;
+    height: 300px;
+    margin-top: 30px;
+    display: grid;
+    text-align: justify;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+.odd {
+   align-items: flex-end;
+    justify-content: flex-end;
+    margin-left: 70%;
 }
 
 .button_div {
@@ -63,6 +94,5 @@ p {
     margin-top: 15px;
 }
 
-.final_result {
-    font-size: 36;
-}
+.story-chapter p {
+    font-size:30px;

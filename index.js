@@ -13,6 +13,8 @@ var emotions = {
   default : 0
 }
 
+var count = 1;
+
 var container = document.getElementById('story')
 document.getElementById("starting_button").addEventListener('click', start)
 
@@ -123,6 +125,7 @@ function deserializeDialog(arrayWithArguments) {
   let div = document.createElement("div")
   let p = document.createElement("p")
   p.innerText = text
+  p.classList.add("story-chapter")
   div.appendChild(p)
 
   for(let i = 0; i < imageCount; i++) {
@@ -150,7 +153,8 @@ function deserializeDialog(arrayWithArguments) {
     
     butt.addEventListener('click', () => {
       emotions[buttons[i].emotion] += Number.parseInt(buttons[i].modifier)
-      buttonDiv.style.visibility = 'hidden'
+    //  buttonDiv.style.visibility = 'hidden'
+    buttonDiv.classList.add(removeText);
       let buttonAnswer = document.createElement('p')
       buttonAnswer.textContent = butt.innerText
       div.appendChild(buttonAnswer)
@@ -159,7 +163,14 @@ function deserializeDialog(arrayWithArguments) {
     buttonDiv.appendChild(butt)
   }
   div.appendChild(buttonDiv)
-  div.classList.add("story-chapter")
+  //div.classList.add("story-chapter") 
+if(count%2==0) {
+  div.classList.add("even") 
+}
+else {
+  div.classList.add("odd") 
+}
+count++;
   container.appendChild(div)
   div.scrollIntoView({ behavior: "smooth", block: "end" })
 }
