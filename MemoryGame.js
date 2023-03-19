@@ -3,7 +3,7 @@ const selectors = {
     board: document.querySelector('.board'),
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
-    start: document.querySelector('button'),
+    start: document.getElementById('start-memory'),
     win: document.querySelector('.win')
 }
 
@@ -44,23 +44,26 @@ const pickRandom = (array, items) => {
 }
 
 const generateGame = () => {
+    if(state.gameStarted == true) {
+        
+    }
     const dimensions = selectors.board.getAttribute('data-dimension')
 
     if (dimensions % 2 !== 0) {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    const pictures = [ 'pictures/cat.png', 'pictures/corgi.png',  'pictures/eevee.png', 'pictures/fox.png', 'pictures/ghost.png',
-    'pictures/hamburger.png', 'pictures/heart.png', 'pictures/nyan_cat.png', 'pictures/panda.png', 'pictures/penguin.png',
-    'pictures/pony.png', 'pictures/rayquaza.png', 'pictures/star.png']
-    const picks = pickRandom(pictures, (dimensions * dimensions) / 2) 
-    const items = shuffle([...picks, ...picks])
-    const cards = `
+    var pictures = [ 'resources/memory-game/cat.png', 'resources/memory-game/corgi.png',  'resources/memory-game/eevee.png', 'resources/memory-game/fox.png', 'resources/memory-game/ghost.png',
+    'resources/memory-game/hamburger.png', 'resources/memory-game/heart.png', 'resources/memory-game/nyan_cat.png', 'resources/memory-game/panda.png', 'resources/memory-game/penguin.png',
+    'resources/memory-game/pony.png', 'resources/memory-game/rayquaza.png', 'resources/memory-game/star.png']
+    var picks = pickRandom(pictures, (dimensions * dimensions) / 2) 
+    var items = shuffle([...picks, ...picks])
+    var cards = `
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
             ${items.map(item => `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back" style="background-image:url(\'${item}\');background-size:100px 100px;">${item}</div> 
+                    <div class="card-back" style="background-image:url(\'${item}\');background-size:80px 80px;">${item}</div> 
                 </div>
             `).join('')}
        </div>
@@ -99,6 +102,7 @@ const flipCard = card => {
 
     if (!state.gameStarted) {
         startGame()
+        
     }
 
     if (state.flippedCards <= 2) {
@@ -132,8 +136,19 @@ const flipCard = card => {
             `
 
             clearInterval(state.loop)
-        }, 1000)
+            restartGame();
+            
+        }, 500)
     }
+}
+
+export function restartGame() {
+    flipAllCards();
+    state.totalFlips = 0;
+    state.totalTime = 0;
+    state.loop= null;
+    state.gameStarted = false;
+    state.flippedCards = 0;
 }
 
 const attachEventListeners = () => {
@@ -149,5 +164,18 @@ const attachEventListeners = () => {
     })
 }
 
-generateGame()
-attachEventListeners()
+
+    const flipAllCards = () => {
+        document.querySelectorAll('.flipped').forEach(card => {
+            card.classList.remove('flipped')
+            card.classList.remove('matched')
+        })
+        items = shuffle([...picks, ...picks])
+    }
+
+export function openMemoryGame() {
+    document.getElementsByClassName("game-board")[0].classList.remove("remove");
+    generateGame()
+    attachEventListeners()    
+}
+

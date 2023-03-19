@@ -1,6 +1,8 @@
 import { openSlidingPuzzle } from './slidingPuzzles.js'
+import { openMemoryGame, restartGame } from './MemoryGame.js'
 
 var lives = 3;
+const removeText = "remove";
 
 var emotions = {
   anger: 0,
@@ -11,22 +13,37 @@ var emotions = {
   default : 0
 }
 
-var hp = 2
-
 var container = document.getElementById('story')
 document.getElementById("starting_button").addEventListener('click', start)
-document.getElementById("start-game").addEventListener('click', loadSlidingPuzzle("couple"))
 
 document.getElementById("giveup-btn").addEventListener('click', () => {
   document.body.classList.remove("active-popup");
-  document.getElementById("hint-popup").classList.add("remove");
+  document.getElementById("hint-popup").classList.add(removeText);
+ 
+  if(document.getElementById("memory").classList.contains(removeText)) {
+    document.getElementById("sliding").classList.add(removeText);
+    removeTilesSlidingPuzzle();
+  }
+  else {
+    document.getElementById("memory").classList.add(removeText);
+    restartGame();
+  }
   lives--;
 isGameOver();
 })
 
-document.getElementById("play-game").addEventListener("click", () => {
-  document.getElementById("hint-popup").classList.remove("remove");
-   document.body.classList.add("active-popup");
+document.getElementById("play-game-sliding").addEventListener("click", () => {
+  document.getElementById("hint-popup").classList.remove(removeText);
+  document.getElementById("sliding").classList.remove(removeText);
+  document.body.classList.add("active-popup");
+  loadSlidingPuzzle("couple");
+});
+
+document.getElementById("play-game-memory").addEventListener("click", () => {
+  document.getElementById("hint-popup").classList.remove(removeText);
+  document.getElementById("memory").classList.remove(removeText);
+  document.body.classList.add("active-popup");
+  loadMemoryGame();
 });
 
 async function start() {
@@ -199,8 +216,17 @@ function loadSlidingPuzzle(theme) {
 
 if(openSlidingPuzzle(theme)) {
   console.log("official win");
+  removeTilesMemoryGame
   }
 }
+
+function loadMemoryGame() {
+
+  if(openMemoryGame()) {
+    console.log("official win");
+    removeTilesSlidingPuzzle();
+    }
+  }
 
 function isGameOver() {
   if(lives === 0) {
@@ -209,6 +235,14 @@ function isGameOver() {
   else return false;
 }
 
-function loadBossFight(args) {
+function loadBossFight(args) { 
+  
+}
 
+function removeTilesSlidingPuzzle() {
+  document.getElementById("tiles").innerHTML = "";
+}
+
+function removeTilesMemoryGame() {
+  //document.getElementById("board-memory").innerHTML = "";
 }

@@ -1,20 +1,11 @@
 @font-face {
     font-family: RoK;
-    src: url("./Rise of Kingdom.ttf");
+    src: url("./../resources/Rise of Kingdom.ttf");
 }
 
 html {
-    width: 100%;
-    height: 100%;
     background: linear-gradient(325deg, #896a3c 0%, #efb986 50%, #e6d4bb 100%);
     font-family: RoK;
-}
-
-.game {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .controls {
@@ -58,10 +49,10 @@ button {
 }
 
 .board {
-    padding: 20px;
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .board-container.flipped .board {
@@ -74,8 +65,8 @@ button {
 
 .card {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
 }
 
