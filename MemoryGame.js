@@ -2,7 +2,7 @@ const selectors = {
     boardContainer: document.querySelector('.board-container'),
     board: document.querySelector('.board'),
     moves: document.querySelector('.moves'),
-    timer: document.querySelector('.timer'),
+    //timer: document.querySelector('.timer'),
     start: document.getElementById('start-memory'),
     win: document.querySelector('.win')
 }
@@ -84,7 +84,7 @@ const startGame = () => {
         state.totalTime++
 
         //selectors.moves.innerText = `${state.totalFlips} moves`
-        selectors.timer.innerText = `time: ${state.totalTime} sec`
+      //  selectors.timer.innerText = `time: ${state.totalTime} sec`
     }, 500)
 }
 

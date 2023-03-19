@@ -6,14 +6,22 @@
 }
 
 .answer_button {
-    background-color: white;
+    background-color: #34271f;
     border: solid 1px black;
-    width: 150px;
-    height: 40px;
-    margin-left: 25px 
+    width: 200px;
+    height: 60px;
+    margin-left: 25px ;
+    font-size: 20px;
+
 }
 
 .img {
     width: 600px;
     height: 480px;
+}
+
+.story {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
