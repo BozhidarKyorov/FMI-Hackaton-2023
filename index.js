@@ -237,11 +237,12 @@ function askLogicQuestion(logicQuizArguments, link_next) {
   answerDiv.scrollIntoView({ behavior: "smooth", block: "end" })
 }
 
-function loadSlidingPuzzle(theme) {
+async function loadSlidingPuzzle(theme) {
 
-if(openSlidingPuzzle(theme)) {
+if(await openSlidingPuzzle(theme)) {
   console.log("official win");
-  removeTilesMemoryGame
+  } else {
+    console.log("you fucking lost")
   }
 }
 
@@ -250,8 +251,8 @@ function loadMemoryGame() {
   if(openMemoryGame()) {
     console.log("official win");
     removeTilesSlidingPuzzle();
-    }
   }
+}
 
 function isGameOver() {
   if(lives === 0) {
@@ -308,4 +309,3 @@ function loadBossFight(args) {
 function removeTilesSlidingPuzzle() {
   document.getElementById("tiles").innerHTML = "";
 }
-
