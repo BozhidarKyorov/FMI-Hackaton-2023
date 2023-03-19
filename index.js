@@ -1,4 +1,4 @@
-import { openSlidingPuzzle } from './slidingPuzzles.js'
+import { openSlidingPuzzle, hasWonGame } from './slidingPuzzles.js'
 import { openMemoryGame, restartGame } from './MemoryGame.js'
 
 var lives = 3;
@@ -232,10 +232,11 @@ if(openSlidingPuzzle(theme)) {
 }
 
 function loadMemoryGame() {
-
-  if(openMemoryGame()) {
+  openMemoryGame()
+  if(hasWonGame) {
     console.log("official win");
     removeTilesSlidingPuzzle();
+    hasWon = false;
     }
   }
 

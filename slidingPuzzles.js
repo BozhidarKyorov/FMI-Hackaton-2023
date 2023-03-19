@@ -4,7 +4,6 @@ var hasWon = false;
 export function openSlidingPuzzle(arg) {
   theme = arg;
   start();
-  return hasWon;
 }
 
 let numberOfTiles = 9;
@@ -123,6 +122,10 @@ function checkHasWon() {
       }
   }
   return true;
+}
+
+export function hasWonGame() {
+    return hasWon;
 }
 
 // Applies stylings to the selected tile
