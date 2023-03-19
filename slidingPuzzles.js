@@ -1,9 +1,10 @@
 var theme;
 
 var hasWon = false;
-export function openSlidingPuzzle(arg) {
+export async function openSlidingPuzzle(arg) {
   theme = arg;
   start();
+  return hasWon;
 }
 
 let numberOfTiles = 9;
@@ -101,13 +102,16 @@ function swap(clicked) {
   }
 
    if (shuffled && !hasJustWon) {
-       if (checkHasWon()) {console.log("win");
+       if (checkHasWon()) {
+        console.log("win");
   //         document.body.classList.add("active-popup");
   //         timerElement.innerText = timeToDisplay;
   //         document.getElementById("player-time").innerHTML = timeToDisplay;
   //         hasJustWon = true;
   //         stop();
   //         shuffled = false;
+  hasWon = true;
+  console.log(hasWon);
       }
    }
 }
