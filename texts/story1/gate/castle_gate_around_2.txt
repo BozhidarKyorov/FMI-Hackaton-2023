@@ -2,7 +2,7 @@ dialog
 Cyrcling around half the castle, there is still nothing but stone.
 0
 1
-Continue around
+Continue around once more
 ./texts/story1/gate/castle_gate_around_3.txt
 default
 0
