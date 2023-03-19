@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 html {
-    --mainFontBtn: 'Open Sans Condensed', sans-serif;
+   
 }
 .game-board {
     display: flex;
@@ -28,7 +28,7 @@ html {
   }
   
   .tile {
-    font-family: var(--mainFontBtn);
+
     font-size: 24px;
     height: 100px;
     margin: 1px;
@@ -72,14 +72,16 @@ html {
   .btn {
     cursor: pointer;
     position: relative;
-    color: black;
+    color: rgb(255, 255, 255);
     width: 256px;
     height: 64px;
     line-height: 64px;
     transition: all 0.3s;
     display: inline-flex;
     justify-content: center;
-    font-family: var(--mainFontBtn);
+    background-color: #34271f;
+    border-radius: 5px;
+   /* font-family: var(--mainFontBtn); */
 }
 
   span .btn {
@@ -105,7 +107,6 @@ html {
     width: 100px;
     height: 40px;
     margin: 5px;
-    font-weight: bold;
     font-size: 16px;
 }
 
